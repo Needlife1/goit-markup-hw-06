@@ -401,8 +401,8 @@
 
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
-            <button data-modal-close type="button" class="modal-button" width="18" height="18">
-                <svg class="modal-close-icon">
+            <button data-modal-close type="button" class="modal-button">
+                <svg class="modal-close-icon" width="18" height="18">
                     <use href="./images/symbol-defs.svg#icon-close-black"></use>
                 </svg>
             </button>
@@ -436,18 +436,25 @@
                 </div>
 
                 <div class="form-field">
+                    <label for="comments">Коментар</label>
                     <textarea class="backdrop-textarea" name="comments" id="comments" rows="6"
                         placeholder="Введіть текст"></textarea>
-                    <label for="comments">Коментар</label>
+
                 </div>
 
                 <label class="checkbox-backdrop">
-                    <input type="checkbox" name="agree" value="agree">
+                    <svg class="checkbox-icon" width="16" height="15">
+                        <use></use>
+                    </svg>
+                    <input class="input-checbox" type="checkbox" name="agree" value="agree">
                     <p class="checkbox-text">Погоджуюся з розсилкою та приймаю<a class="checkbox-link" href="">Умови
                             договору</a></p>
                 </label>
 
-                <button class="checkbox-button" type="submit">Відправити</button>
+                <button class="backdrop-button" type="submit">Відправити</button>
+                <!-- <svg width="30" height="30">
+                        <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+                    </svg>  -->
 
 
             </form>
