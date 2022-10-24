@@ -999,11 +999,7 @@ textarea::placeholder {
 }
 
 
-.checkbox-backdrop input[type="checkbox"] {
-    width: 16px;
-    height: 15px;
 
-}
 
 .checkbox-backdrop {
     display: flex;
@@ -1015,12 +1011,22 @@ textarea::placeholder {
 }
 
 .input-checbox {
-    /* Сбрасывает все оформление от браузера */
+    /* Сбрасывает все оформление от браузера  */
     appearance: none;
     position: absolute;
 }
 
 
+/* Если .input выбран(:checked) то пусть его сосед 
+.checkbox-text а точнее его ::before будет выполнять
+заданые дйствия */
+.input-checbox:checked+.checkbox-text::before {
+    background-color: var(--accent-color);
+    background-image: url(../images/icon\ check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
+}
 
 .checkbox-text {
     font-family: 'Roboto';
@@ -1031,8 +1037,21 @@ textarea::placeholder {
     letter-spacing: 0.03em;
     color: var(--text-color);
     margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 8px;
+
 
 }
+
 
 .checkbox-link {
     font-family: 'Roboto';
