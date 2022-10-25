@@ -411,7 +411,7 @@
 
                 <div class="form-field">
                     <label for="name">Ім'я</label>
-                    <input class="form-input" type="text" name="name" id="name">
+                    <input class="form-input" type="text" name="name" id="name" required>
                     <svg class="form-icon" width="18" height="18">
                         <use href="./images/symbol-defs.svg#icon-person-black"></use>
                     </svg>
@@ -419,7 +419,7 @@
 
                 <div class="form-field">
                     <label for="tel">Телефон</label>
-                    <input class="form-input" type="tel" name="tel" id="tel">
+                    <input class="form-input" type="tel" name="tel" id="tel" required>
                     <svg class="form-icon" width="18" height="18">
                         <use href="./images/symbol-defs.svg#icon-phone-blackp"></use>
                     </svg>
@@ -427,33 +427,28 @@
 
                 <div class="form-field">
                     <label for="email">Пошта</label>
-                    <input class="form-input" type="email" name="email" id="email">
+                    <input class="form-input" type="email" name="email" id="email" required>
                     <svg class="form-icon" width="18" height="18">
                         <use href="./images/symbol-defs.svg#icon-email-black"></use>
                     </svg>
                 </div>
 
-                <div class="form-field">
-                    <label for="comments">Коментар</label>
+                <div class="form-textarea">
+                    <label class="textarea-label" for="comments">Коментар</label>
                     <textarea class="backdrop-textarea" name="comments" id="comments" rows="6"
                         placeholder="Введіть текст"></textarea>
 
                 </div>
 
                 <label class="checkbox-backdrop">
-                    <svg class="checkbox-icon" width="16" height="15">
-                        <use></use>
-                    </svg>
-                    <input class="input-checbox" type="checkbox" name="agree" value="agree">
+                    <input class="input-checbox" type="checkbox" name="agree" value="agree" required>
                     <p class="checkbox-text">Погоджуюся з розсилкою та приймаю
                         <a class="checkbox-link" href="">Умови договору</a>
                     </p>
                 </label>
 
                 <button class="backdrop-button" type="submit">Відправити</button>
-                <!-- <svg width="30" height="30">
-                        <use href="./images/symbol-defs.svg#icon-icon-check"></use>
-                    </svg>  -->
+
 
 
             </form>
